@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* shared css  */
+
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto+Slab:wght@400;700&family=Young+Serif&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* font-family: 'Dancing Script', cursive;
+font-family: 'Roboto Slab', serif;
+font-family: 'Young Serif', serif; */
+
+.dancingFont {
+  font-family: "Dancing Script", cursive;
+}
+
+.robotoFont {
+  font-family: "Roboto Slab", serif;
+}
+
+.youngSerifFont {
+  font-family: "Young Serif", serif;
+}
