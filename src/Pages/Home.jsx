@@ -4,13 +4,8 @@ import Hero from "../Components/Hero";
 const Home = () => {
   return (
     <div>
-      <h1>Home</h1>
-      <h1>Home</h1>
-      <h1>Home</h1>
-      <h1>Home</h1>
-      <h1>Home</h1>
       {/* hero Component */}
-      <div className="heroContainer">
+      <div className="heroContainer  pt-[4.2rem] ">
         <Hero />
       </div>
       {/* hero Component */}
