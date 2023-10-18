@@ -32,7 +32,7 @@ const NavBar = () => {
 
   return (
     <div className="navContainer  py-2 bg-[#d09cf0]  fixed w-full z-20 shadow ">
-      <div className="navWrapper flex justify-between w-[96%] lg:w-[90%] m-auto items-center ">
+      <div className="navWrapper flex justify-between w-[99%] xsm:w-[96%] lg:w-[90%] m-auto items-center ">
         {/* nav left  */}
         <div className="navLeft  ">
           <div className="navLeftImg  ">
