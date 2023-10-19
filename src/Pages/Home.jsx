@@ -3,6 +3,8 @@ import Brand from "../Components/Brand";
 import Slider from "../Components/Slider";
 import Products from "./Products";
 import Category from "./Category";
+import Stats from "./Stats";
+import QualityAssurance from "./QualityAssurance";
 
 const Home = () => {
   return (
@@ -30,6 +32,18 @@ const Home = () => {
         <Products />
       </div>
       {/* products container  */}
+
+      {/* stats container  */}
+      <div className="statsContainer">
+        <Stats />
+      </div>
+      {/* stats container  */}
+
+      {/* quality container  */}
+      <div className="qualityAssurance">
+        <QualityAssurance />
+      </div>
+      {/* quality container  */}
 
       {/*  */}
     </div>
