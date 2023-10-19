@@ -3,18 +3,18 @@ import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import UseInputHook from "../Hooks/InputHook";
 import InputField from "../Components/InputField";
-// import { AppContext } from "../Context/Context";
-// import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { AppContext } from "../Context/AuthContext";
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { FcGoogle } from "react-icons/fc";
-// import auth from "../Firebase.config";
+import { auth } from "../Firebase.config";
 
 const Login = () => {
-  //   const { user, loading, emailLogin } = useContext(AppContext);
-  //   const location = useLocation();
-  //   const navigate = useNavigate();
+  const { user, loading, emailLogin } = useContext(AppContext);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const emailInput = UseInputHook();
   const passwordInput = UseInputHook();
@@ -53,38 +53,39 @@ const Login = () => {
     console.log(emailInput.value);
     console.log(passwordInput.value);
 
-    //   emailLogin(emailInput.value, passwordInput.value)
-    //     .then((user) => {
-    //       addedSuccessFully();
+    emailLogin(emailInput.value, passwordInput.value)
+      .then((user) => {
+        console.log(user);
+        addedSuccessFully();
 
-    //       setTimeout(() => {
-    //         navigate(location?.state ? location.state : "/");
-    //       }, "1200");
-    //     })
-    //     .catch((error) => {
-    //       console.log(error);
-    //       errorlogin();
-    //     });
+        setTimeout(() => {
+          navigate(location?.state ? location.state : "/");
+        }, "1200");
+      })
+      .catch((error) => {
+        console.log(error);
+        errorlogin();
+      });
 
-    //   emailInput.reset();
-    //   passwordInput.reset();
+    emailInput.reset();
+    passwordInput.reset();
   };
 
   // google login
-  //   const handleGoogleLogin = () => {
-  //     console.log("google login click");
-  //     const googleProvider = new GoogleAuthProvider();
+  const handleGoogleLogin = () => {
+    console.log("google login click");
+    const googleProvider = new GoogleAuthProvider();
 
-  //     signInWithPopup(auth, googleProvider)
-  //       .then((response) => {
-  //         addedSuccessFully();
+    signInWithPopup(auth, googleProvider)
+      .then((response) => {
+        addedSuccessFully();
 
-  //         setTimeout(() => {
-  //           navigate(location?.state ? location.state : "/");
-  //         }, "1200");
-  //       })
-  //       .catch((error) => console.log(error));
-  //   };
+        setTimeout(() => {
+          navigate(location?.state ? location.state : "/");
+        }, "1200");
+      })
+      .catch((error) => console.log(error));
+  };
 
   return (
     <div className=" pt-[3.2rem] xsm:pt-[3.5rem] sm:pt-[3.7rem]  ">
@@ -138,7 +139,7 @@ const Login = () => {
 
           <p
             className=" robotoFont mt-3 cursor-pointer hover:underline flex items-center text-base xsm:text-lg sm:text-xl gap-2 "
-            // onClick={() => handleGoogleLogin()}
+            onClick={() => handleGoogleLogin()}
           >
             Sign in with
             <span className=" text-xl sm:text-2xl">
