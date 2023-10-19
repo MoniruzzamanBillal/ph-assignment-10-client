@@ -1,19 +1,18 @@
 import React, { useContext, useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import { Link, useNavigate } from "react-router-dom";
 
 import UseInputHook from "../Hooks/InputHook";
 import InputField from "../Components/InputField";
-// import { AppContext } from "../Context/Context";
-// import { updateProfile } from "firebase/auth";
 
 import { FcGoogle } from "react-icons/fc";
-
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { updateProfile } from "firebase/auth";
+import { AppContext } from "../Context/AuthContext";
 
 const Register = () => {
-  // const { registerEmail, logOut } = useContext(AppContext);
+  const { registerEmail, logOut } = useContext(AppContext);
 
   const navigate = useNavigate();
 
@@ -25,13 +24,13 @@ const Register = () => {
   const [isChecked, setIsChecked] = useState(false);
 
   // logout function
-  // const handleLogout = () => {
-  //   logOut()
-  //     .then((response) => console.log(response))
-  //     .catch((error) => console.log(error));
-  // };
+  const handleLogout = () => {
+    logOut()
+      .then((response) => console.log(response))
+      .catch((error) => console.log(error));
+  };
 
-  // toast for succesds fully register
+  // toast for success fully register
   const registerSuccessfully = () =>
     toast.success("Register successfully!", {
       position: "top-center",
@@ -46,9 +45,9 @@ const Register = () => {
 
   // toast for term and condition error
   const termError = () =>
-    toast.warn("Select terms and conditions", {
+    toast.error("Select terms and conditions", {
       position: "top-center",
-      autoClose: 2000,
+      autoClose: 5000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
@@ -57,11 +56,11 @@ const Register = () => {
       theme: "colored",
     });
 
-  // toast for empth input field
+  // toast for empty input field
   const inputFieldError = () =>
-    toast.warn("All fields are required", {
+    toast.error("All fields are required", {
       position: "top-center",
-      autoClose: 2000,
+      autoClose: 5000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
@@ -72,7 +71,7 @@ const Register = () => {
 
   // toast for password validation
   const passwordValidationError = () =>
-    toast.warn(
+    toast.error(
       "Password should be at least 6 characters long, contain a capital letter, and a special character",
       {
         position: "top-center",
@@ -107,21 +106,76 @@ const Register = () => {
   // registration function
   const handleRegister = () => {
     console.log("register click");
+
+    // Check any input fields are empty
+    if (
+      !nameInput.value.trim() ||
+      !imageInput.value.trim() ||
+      !emailInput.value.trim() ||
+      !passwordInput.value.trim()
+    ) {
+      return inputFieldError();
+    } else if (!isChecked) {
+      return termError();
+    } else if (!isPasswordValid(passwordInput.value)) {
+      return passwordValidationError();
+    }
+
+    registerEmail(emailInput.value, passwordInput.value)
+      .then((result) => {
+        const displayName = nameInput.value;
+        const photoURL = imageInput.value;
+
+        updateProfile(result.user, { displayName, photoURL })
+          .then((user) => {
+            console.log("User profile updated successfully:", user);
+
+            registerSuccessfully();
+          })
+          .catch((error) => {
+            console.error("Error updating user profile:", error);
+          });
+        handleLogout();
+
+        navigate(`/login`);
+      })
+      .catch((error) => {
+        const errormsg = error.message;
+        console.log(errormsg);
+
+        toast.warn(`${errormsg}`, {
+          position: "top-center",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
+      });
+
+    // nameInput.reset();
+    // imageInput.reset();
+    // emailInput.reset();
+    // passwordInput.reset();
+
+    //
   };
 
   return (
-    <div className="  pt-[4rem] ">
+    <div className="  pt-[3.2rem] xsm:pt-[3.5rem] sm:pt-[3.7rem] ">
       {/* <!-- component --> */}
 
       <div
-        className=" py-4 relative mainContiner flex  w-full items-center justify-center bg-gray-900 bg-no-repeat bg-cover "
+        className=" py-4 relative mainContiner flex  w-full items-center justify-center bg-gray-900 bg-no-repeat bg-cover bg-center "
         style={{
           backgroundImage: `url('https://i.ibb.co/5Mmn4Jf/pexels-pixabay-270640.jpg')`,
         }}
       >
         <div className="absolute w-full h-full opacity-20 top-0 left-0 bg-gray-800  "></div>
 
-        <div className="  formContainer w-[85%] xsm:w-[65%] sm:w-[58%] md:w-[50%] xmd:w-[46%] lg:w-[39%] rounded-md bg-gray-200 bg-opacity-60  shadow-lg backdrop-blur px-4 py-5 sm:px-5 sm:py-7 md:px-6 md:py-8 ">
+        <div className="  formContainer w-[82%] xsm:w-[72%] sm:w-[64%] md:w-[52%] xmd:w-[49%] lg:w-[44%] rounded-md bg-gray-200 bg-opacity-60  shadow-lg backdrop-blur px-4 py-5 sm:px-5 sm:py-7 md:px-6 md:py-8 ">
           {/* form  */}
 
           {/* register body  body   */}
@@ -192,8 +246,6 @@ const Register = () => {
             Register
           </button>
 
-          <ToastContainer />
-
           <p className="  mt-3 ">
             Already have An Account ?
             <span className="text-red-500">
@@ -206,6 +258,7 @@ const Register = () => {
           {/* form  */}
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };

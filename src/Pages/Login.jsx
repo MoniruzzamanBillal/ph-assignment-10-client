@@ -91,7 +91,7 @@ const Login = () => {
       {/* <!-- component --> */}
 
       <div
-        className=" py-4 relative mainContiner flex  w-full items-center justify-center bg-gray-900 bg-no-repeat bg-cover "
+        className=" py-4 relative mainContiner flex  w-full items-center justify-center bg-gray-900 bg-no-repeat bg-cover bg-center "
         style={{
           backgroundImage: `url('https://i.ibb.co/LZKzL52/pexels-garrett-morrow-682933.jpg')`,
         }}
