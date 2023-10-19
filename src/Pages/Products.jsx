@@ -9,7 +9,7 @@ const Products = () => {
           Our products{" "}
         </h1>
 
-        <div className="productCardContainer bg-lime-400 ">
+        <div className="productCardContainer bg-lime-400 grid grid-cols-4 gap-x-4 gap-y-6  ">
           <ProductCard />
         </div>
       </div>

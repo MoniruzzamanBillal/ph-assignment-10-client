@@ -5,27 +5,39 @@ const AddProduct = () => {
     e.preventDefault();
     // console.log("submit click");
     const form = e.target;
-    const name = form.name.value;
-    const brand = form.brand.value;
-    const price = form.price.value;
-    const category = form.category.value;
-    const supplier = form.Supplier.value;
 
-    // console.log(name);
-    // console.log(brand);
-    // console.log(price);
-    // console.log(category);
-    // console.log(supplier);
+    const brandName = form.brand.value;
+    const productName = form.productName.value;
+    const productImg = form.image.value;
+    const category = form.category.value;
+    const price = form.price.value;
+    const rating = form.rating.value;
+    const productDescription = form.description.value;
 
     const newItemObj = {
-      name,
-      brand,
-      price,
+      brandName,
+      productName,
+      productImg,
       category,
-      supplier,
+      price,
+      rating,
+      productDescription,
     };
 
     console.log(newItemObj);
+
+    const fetchMethod = {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(newItemObj),
+    };
+
+    fetch(`http://localhost:5000/product`, fetchMethod)
+      .then((response) => response.json())
+      .then((data) => console.log(data))
+      .catch((error) => console.log(error));
   };
 
   return (
@@ -70,15 +82,15 @@ const AddProduct = () => {
               {/* product name  */}
               <div className="w-full">
                 <label
-                  htmlFor="name"
+                  htmlFor="productName"
                   className="block mb-2 text-sm font-medium text-gray-900 "
                 >
                   Product Name
                 </label>
                 <input
                   type="text"
-                  name="name"
-                  id="name"
+                  name="productName"
+                  id="productName"
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
                   placeholder="Type product name"
                   required=""
@@ -170,15 +182,15 @@ const AddProduct = () => {
               {/* short description  */}
               <div className="sm:col-span-2">
                 <label
-                  for="description"
-                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  htmlFor="description"
+                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
                   Description
                 </label>
                 <textarea
                   id="description"
                   rows="4"
-                  class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="Give short description about product"
                 ></textarea>
               </div>
