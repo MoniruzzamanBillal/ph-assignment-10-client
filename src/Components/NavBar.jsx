@@ -11,15 +11,14 @@ const navLink = [
   },
   {
     item: "Add Product",
+    link: "/addproduct",
+  },
+  {
+    item: "About us",
     link: "/",
   },
   {
     item: "My Cart",
-    link: "/",
-  },
-
-  {
-    item: "About us",
     link: "/",
   },
 ];
@@ -40,8 +39,8 @@ const NavBar = () => {
   };
 
   return (
-    <div className="navContainer  py-2 bg-[#d09cf0]  fixed w-full z-20 shadow ">
-      <div className="navWrapper flex justify-between w-[99%] xsm:w-[96%] lg:w-[90%] m-auto items-center ">
+    <div className="navContainer  py-2 bg-[#d09cf0]  fixed w-full z-20 drop-shadow-lg ">
+      <div className="navWrapper flex justify-between w-[97%] xsm:w-[96%] lg:w-[94%] m-auto items-center ">
         {/* nav left  */}
         <div className="navLeft  ">
           <div className="navLeftImg  ">
@@ -71,9 +70,11 @@ const NavBar = () => {
               to={ele.link}
               className={`  ${
                 navLink.length - 1 === ind ? "mr-0" : "mr-5"
-              } youngSerifFont text-base lg:text-lg text-[#E4F1FF] hover:text-blue-700 hover:drop-shadow-md `}
+              } relative group youngSerifFont text-base lg:text-lg text-[#E4F1FF] hover:text-blue-500 hover:drop-shadow-md  `}
             >
               {ele.item}
+              <span className="absolute -bottom-[.15rem] left-1/2 w-0 h-[.14rem] bg-blue-400 group-hover:w-1/2 group-hover:transition-all"></span>
+              <span className="absolute -bottom-[.15rem] right-1/2 w-0 h-[.14rem] bg-red-400 group-hover:w-1/2 group-hover:transition-all"></span>
             </NavLink>
           ))}
         </div>

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto+Slab:wght@400;700&family=Young+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -16,6 +17,17 @@
 /* font-family: 'Dancing Script', cursive;
 font-family: 'Roboto Slab', serif;
 font-family: 'Young Serif', serif; */
+/* font-family: 'Pacifico', cursive; */
+
+.active {
+  border-bottom: 2px solid rebeccapurple;
+  color: #00ffe5;
+}
+
+/* for informal  */
+.pocificoFont {
+  font-family: "Pacifico", cursive;
+}
 
 /* for informal  */
 .dancingFont {
@@ -28,4 +40,13 @@ font-family: 'Young Serif', serif; */
 
 .youngSerifFont {
   font-family: "Young Serif", serif;
+}
+
+.remove-arrow::-webkit-inner-spin-button,
+.remove-arrow::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.remove-arrow {
+  -moz-appearance: textfield;
 }
