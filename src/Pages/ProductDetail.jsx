@@ -47,9 +47,9 @@ const ProductDetail = () => {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
-        // if (data.insertedId) {
-        //   alert("item added successfully");
-        // }
+        if (data.acknowledged) {
+          alert("item added successfully");
+        }
       })
       .catch((error) => console.log(error));
 

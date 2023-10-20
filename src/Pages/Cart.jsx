@@ -19,6 +19,26 @@ const Cart = () => {
     setFilterData(filterItem);
   }, [loggedUser, cartData]);
 
+  // delete function
+  const handleDelete = (id) => {
+    console.log("click");
+    // console.log(id);
+
+    fetch(`http://localhost:5000/addcart/${id}`, {
+      method: "DELETE",
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+
+        const remaining = filterData.filter((data) => data._id !== id);
+        console.log(remaining);
+        // setRecipes(remaining);
+        setFilterData(remaining);
+      })
+      .catch((error) => console.log(error));
+  };
+
   let sum = 0;
   const totalPrice = filterData.forEach((element) => {
     sum += sum + parseFloat(element.price);
@@ -29,7 +49,7 @@ const Cart = () => {
 
   let total = sum + shiiping;
 
-  console.log(filterData);
+  // console.log(filterData);
 
   return (
     <div>
@@ -41,41 +61,52 @@ const Cart = () => {
           {/* left side  */}
 
           {/* added items  */}
-
-          {filterData &&
-            filterData.map((data, ind) => (
-              <div class=" leftSide rounded-lg   md:w-2/3" key={ind}>
-                {/* item container  */}
-                <div class=" ItemContainer justify-between mb-6 rounded-lg bg-gray-50 p-6 shadow-md sm:flex sm:justify-start">
-                  <img
-                    src={data.productImg}
-                    alt="product-image"
-                    class="w-full rounded-lg sm:w-40"
-                  />
-                  <div class="sm:ml-4 sm:flex sm:w-full sm:justify-between">
-                    <div class="mt-5 sm:mt-0">
-                      <h2 class="text-lg font-bold text-gray-900">
-                        {data.productName}
-                      </h2>
-                      {/* <p class="mt-1 text-xs text-gray-700">36EU - 4US</p> */}
-                      <p class="mt-1 text-xs text-gray-700">
-                        {" "}
-                        <span className=" font-semibold ">price :</span>{" "}
-                        {data.price} ${" "}
-                      </p>
-                    </div>
-                    <div class="  flex justify-center items-center mt-4  sm:mt-0 ">
-                      <div className="removeButton  ">
-                        <button className=" bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-5 rounded active:scale-95 ">
-                          Remove
-                        </button>
+          <div class="  leftSide rounded-lg   md:w-2/3">
+            {/* item container  */}
+            {filterData &&
+              filterData.map((data, ind) => (
+                <>
+                  {/* item container  */}
+                  <div class=" ItemContainer justify-between mb-6 rounded-lg bg-gray-50 p-6 shadow-md sm:flex sm:justify-start">
+                    <img
+                      src={data.productImg}
+                      alt="product-image"
+                      class="w-full rounded-lg sm:w-40"
+                    />
+                    <div class="sm:ml-4 sm:flex sm:w-full sm:justify-between">
+                      <div class="mt-5 sm:mt-0">
+                        <h2 class="text-lg font-bold text-gray-900">
+                          {data.productName}
+                        </h2>
+                        {/* <p class="mt-1 text-xs text-gray-700">36EU - 4US</p> */}
+                        <p class="mt-1 text-xs text-gray-700">
+                          {" "}
+                          <span className=" font-semibold ">price :</span>{" "}
+                          {data.price} ${" "}
+                        </p>
+                      </div>
+                      <div class="  flex justify-center items-center mt-4  sm:mt-0 ">
+                        <div
+                          className="removeButton  "
+                          onClick={() => handleDelete(data._id)}
+                        >
+                          <button className=" bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-5 rounded active:scale-95 ">
+                            Remove
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                {/* item container  */}
-              </div>
-            ))}
+                  {/* item container  */}
+                </>
+              ))}
+            {/* item container  */}
+          </div>
+
+          {/* <div className="leftContainer bg-pink-300 "> */}
+
+          {/* </div> */}
+
           {/* added items  */}
 
           {/* left side  */}
