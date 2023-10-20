@@ -54,7 +54,7 @@ const AddProduct = () => {
   };
 
   return (
-    <div className=" addProductContainer bg-red-300 pt-[3.8rem] ">
+    <div className=" addProductContainer  pt-[3.1rem] xsm:pt-[3.5rem] sm:pt-[3.7rem] ">
       {/*  */}
       <div
         className=" py-4 relative mainContiner flex flex-col  w-full items-center justify-center bg-gray-900 bg-no-repeat bg-cover bg-center "
@@ -62,9 +62,7 @@ const AddProduct = () => {
           backgroundImage: `url('https://i.ibb.co/LZKzL52/pexels-garrett-morrow-682933.jpg')`,
         }}
       >
-        {/* <div className="absolute w-full h-full opacity-20 top-0 left-0 bg-gray-200  "></div> */}
-
-        <h1 className="  robotoFont font-semibold text-4xl pb-2 mb-6 text-[#00ffe5] border-b border-[#00ffe5]  ">
+        <h1 className="   robotoFont font-semibold text-4xl pb-2 mb-6 text-[#00ffe5] border-b border-[#00ffe5]  ">
           Add your Product
         </h1>
 
