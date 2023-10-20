@@ -4,17 +4,17 @@ const Contactus = () => {
   return (
     <div className="ContactUsContainer bg-yellow-200 py-4 ">
       <div className="contactUsWrapper bg-red-400 w-[99%] xsm:w-[96%] lg:w-[90%] m-auto ">
-        <section class="mb-3 bg-gray-200 ">
-          <div class="flex justify-center">
-            <div class="text-center md:max-w-xl lg:max-w-3xl">
-              <h2 class="mb-12 px-6 text-3xl font-bold">Contact us</h2>
+        <section className="mb-3 bg-gray-200 ">
+          <div className="flex justify-center">
+            <div className="text-center md:max-w-xl lg:max-w-3xl">
+              <h2 className="mb-12 px-6 text-3xl font-bold">Contact us</h2>
             </div>
           </div>
 
-          <div class="flex flex-wrap">
-            <div class="mb-12 w-full shrink-0 grow-0 basis-auto md:px-3 lg:mb-0 lg:w-5/12 lg:px-6">
+          <div className="flex flex-wrap">
+            <div className="mb-12 bg-blue-100 rounded py-3 w-full shrink-0 grow-0 basis-auto md:px-3 lg:mb-0 lg:w-5/12 lg:px-6">
               <form>
-                <div class="relative mb-6" data-te-input-wrapper-init>
+                <div className="relative mb-6" data-te-input-wrapper-init>
                   <label
                     htmlFor="name"
                     className="block mb-2 text-sm font-medium text-gray-900 "
@@ -30,7 +30,7 @@ const Contactus = () => {
                     required=""
                   />
                 </div>
-                <div class="relative mb-6" data-te-input-wrapper-init>
+                <div className="relative mb-6" data-te-input-wrapper-init>
                   <label
                     htmlFor="email"
                     className="block mb-2 text-sm font-medium text-gray-900 "
@@ -46,7 +46,7 @@ const Contactus = () => {
                     required=""
                   />
                 </div>
-                <div class="relative mb-6" data-te-input-wrapper-init>
+                <div className="relative mb-6" data-te-input-wrapper-init>
                   <label
                     htmlFor="message"
                     className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -65,25 +65,26 @@ const Contactus = () => {
                   type="button"
                   data-te-ripple-init
                   data-te-ripple-color="light"
-                  class="mb-6 inline-block w-full rounded bg-primary px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                  className="mb-6 inline-block w-full rounded bg-primary px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
                 >
                   Send
                 </button>
               </form>
             </div>
-            <div class="w-full bg-red-300 shrink-0 grow-0 basis-auto lg:w-7/12">
-              <div class="flex flex-wrap">
-                <div class="mb-12 bg-blue-300 w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:px-6">
-                  <div class="flex items-start bg-pink-300 m-auto ">
-                    <div class="shrink-0">
-                      <div class="inline-block rounded-md bg-primary-100 p-4 text-primary">
+            <div className=" bg-red-500 shrink-0 grow-0 basis-auto lg:w-7/12">
+              <div className="flex flex-wrap">
+                {/*  */}
+                <div className="mb-12  bg-blue-300 border border-gray-100 w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:px-6">
+                  <div className="flex items-start  m-auto ">
+                    <div className="shrink-0">
+                      <div className="inline-block rounded-md bg-primary-100 p-4 text-primary">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke-width="2"
                           stroke="currentColor"
-                          class="h-6 w-6"
+                          className="h-6 w-6"
                         >
                           <path
                             stroke-linecap="round"
@@ -93,30 +94,34 @@ const Contactus = () => {
                         </svg>
                       </div>
                     </div>
-                    <div class="ml-6 grow">
-                      <p class="mb-2 font-bold dark:text-white">
+                    <div className="ml-6 grow">
+                      <p className="mb-2 font-bold dark:text-white">
                         Technical support
                       </p>
-                      <p class="text-neutral-500 dark:text-neutral-200">
+                      <p className="text-neutral-500 dark:text-neutral-200">
                         support@example.com
                       </p>
-                      <p class="text-neutral-500 dark:text-neutral-200">
+                      <p className="text-neutral-500 dark:text-neutral-200">
                         +1 234-567-89
                       </p>
                     </div>
                   </div>
                 </div>
-                <div class="mb-12 w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:px-6">
-                  <div class="flex items-start">
-                    <div class="shrink-0">
-                      <div class="inline-block rounded-md bg-primary-100 p-4 text-primary">
+
+                {/*  */}
+
+                {/*  */}
+                <div className="mb-12  border border-gray-100 bg-blue-300 w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:px-6">
+                  <div className="flex items-start  m-auto ">
+                    <div className="shrink-0">
+                      <div className="inline-block rounded-md bg-primary-100 p-4 text-primary">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke-width="2"
                           stroke="currentColor"
-                          class="h-6 w-6"
+                          className="h-6 w-6"
                         >
                           <path
                             stroke-linecap="round"
@@ -126,30 +131,33 @@ const Contactus = () => {
                         </svg>
                       </div>
                     </div>
-                    <div class="ml-6 grow">
-                      <p class="mb-2 font-bold dark:text-white">
+                    <div className="ml-6 grow">
+                      <p className="mb-2 font-bold dark:text-white">
                         Sales questions
                       </p>
-                      <p class="text-neutral-500 dark:text-neutral-200">
+                      <p className="text-neutral-500 dark:text-neutral-200">
                         sales@example.com
                       </p>
-                      <p class="text-neutral-500 dark:text-neutral-200">
+                      <p className="text-neutral-500 dark:text-neutral-200">
                         +1 234-567-89
                       </p>
                     </div>
                   </div>
                 </div>
-                <div class="mb-12 w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:px-6">
-                  <div class="align-start flex">
-                    <div class="shrink-0">
-                      <div class="inline-block rounded-md bg-primary-100 p-4 text-primary">
+                {/*  */}
+
+                {/*  */}
+                <div className="mb-12  bg-blue-300 border border-gray-100 w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:px-6">
+                  <div className="flex items-start m-auto ">
+                    <div className="shrink-0">
+                      <div className="inline-block rounded-md bg-primary-100 p-4 text-primary">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke-width="2"
                           stroke="currentColor"
-                          class="h-6 w-6"
+                          className="h-6 w-6"
                         >
                           <path
                             stroke-linecap="round"
@@ -159,18 +167,22 @@ const Contactus = () => {
                         </svg>
                       </div>
                     </div>
-                    <div class="ml-6 grow">
-                      <p class="mb-2 font-bold dark:text-white">Press</p>
-                      <p class="text-neutral-500 dark:text-neutral-200">
+                    <div className="ml-6 grow">
+                      <p className="mb-2 font-bold dark:text-white">Press</p>
+                      <p className="text-neutral-500 dark:text-neutral-200">
                         press@example.com
                       </p>
-                      <p class="text-neutral-500 dark:text-neutral-200">
+                      <p className="text-neutral-500 dark:text-neutral-200">
                         +1 234-567-89
                       </p>
                     </div>
                   </div>
                 </div>
-                <div class="mb-12 w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:px-6"></div>
+                {/*  */}
+
+                {/*  */}
+
+                <div className="mb-12 w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:px-6"></div>
               </div>
             </div>
           </div>

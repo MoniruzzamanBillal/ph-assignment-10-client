@@ -9,7 +9,7 @@ const CategoryProducts = () => {
   const [filterProducts, setFilterProducts] = useState([]);
 
   //   console.log(name);
-  //   console.log(responseData);
+  // console.log(responseData);
 
   useEffect(() => {
     const expected = allProducts.filter((product) => product.category === name);

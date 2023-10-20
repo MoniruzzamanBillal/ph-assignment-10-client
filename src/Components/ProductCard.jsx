@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 
 import { useNavigate } from "react-router-dom";
+import { AppContext } from "../Context/AuthContext";
 
 const ProductCard = ({ product }) => {
-  const navigate = useNavigate();
+  const { user } = useContext(AppContext);
 
-  // console.log(product);
+  const navigate = useNavigate();
 
   const {
     brandName,
@@ -18,17 +19,17 @@ const ProductCard = ({ product }) => {
     _id,
   } = product;
 
-  const handleDetail = (id) => {
-    // console.log("details button click");
-    // console.log(id);
+  // for disable state
+  const handleDisable = () => {
+    alert("login to see details");
+  };
 
+  const handleDetail = (id) => {
     navigate(`/product/${id}`);
   };
 
   // for update
   const handleUpdate = (id) => {
-    // console.log("update");
-    // console.log(id);
     navigate(`/update/${id}`);
   };
 
@@ -84,11 +85,11 @@ const ProductCard = ({ product }) => {
             {/* product rating  */}
 
             {/* details button  */}
-            <div
-              className="detailBtn bg-red-400 mb-1 active:scale-95 cursor-pointer rounded text-center "
-              onClick={() => handleDetail(_id)}
-            >
-              <button className="robotoFont py-1.5 font-semibold text-gray-50 ">
+            <div className="detailBtn bg-red-400 mb-1 active:scale-95 cursor-pointer rounded text-center  ">
+              <button
+                className="robotoFont py-1.5 bg-blue-500 w-full font-semibold text-gray-50 "
+                onClick={user ? () => handleDetail(_id) : () => handleDisable()}
+              >
                 Details
               </button>
             </div>

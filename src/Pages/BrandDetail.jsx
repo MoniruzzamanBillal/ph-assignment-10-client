@@ -11,7 +11,7 @@ const BrandDetail = () => {
   const [filterData, setFilterData] = useState([]);
   const [phoneData, setPhoneData] = useState(responseData);
 
-  // console.log(phoneData);
+  // console.log(responseData);
   // console.log(name);
 
   // console.log(BrandsItem);

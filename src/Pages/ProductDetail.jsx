@@ -11,7 +11,7 @@ const ProductDetail = () => {
   const [productDetail, getProductDetail] = useState(responseData);
   const loggedUser = user.uid;
   // console.log(user.uid);
-  // console.log(productDetail);
+  // console.log(responseData);
 
   const {
     brandName,
@@ -26,8 +26,8 @@ const ProductDetail = () => {
 
   const handleCart = (id) => {
     // console.log("click");
-    console.log(id);
-    console.log(loggedUser);
+    // console.log(id);
+    // console.log(loggedUser);
     const newItemObj = {
       id,
       loggedUser,

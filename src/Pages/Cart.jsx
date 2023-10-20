@@ -10,7 +10,7 @@ const Cart = () => {
 
   const loggedUser = user.uid;
   // console.log(loggedUser);
-  // console.log(cartData);
+  // console.log(responseData);
 
   useEffect(() => {
     const filterItem = cartData.filter(
