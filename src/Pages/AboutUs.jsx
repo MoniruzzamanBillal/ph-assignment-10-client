@@ -2,17 +2,17 @@ import React from "react";
 
 const AboutUs = () => {
   return (
-    <div className="aboutUsContainer bg-green-300 pt-[3.2rem] xsm:pt-[3.6rem] ">
-      <div className="aboutUsWrapper bg-fuchsia-500 py-4 xsm:py-5 sm:py-6 md:py-8 px-3 w-[99%] xsm:w-[96%] lg:w-[90%] m-auto  ">
-        <h1 className=" bg-red-400 font-bold text-2xl xsm:text-3xl mb-4  ">
+    <div className="aboutUsContainer bg-[#EAFDFC] pt-[3.2rem] xsm:pt-[3.6rem] ">
+      <div className="aboutUsWrapper  py-4 xsm:py-5 sm:py-6 md:py-8 px-3 w-[99%] xsm:w-[96%] lg:w-[90%] m-auto  ">
+        <h1 className="  font-bold text-3xl xsm:text-4xl mb-6 xsm:mb-7 sm:mb-9 dancingFont  ">
           Gadget hunter
         </h1>
 
-        <h1 className=" bg-red-600 font-semibold text-lg xsm:text-xl mb-3 youngSerifFont ">
+        <h1 className="  font-semibold text-lg xsm:text-xl mb-3 youngSerifFont ">
           About gadget hunter{" "}
         </h1>
 
-        <h1 className=" bg-blue-400 mb-2 robotoFont text-sm xsm:text-base ">
+        <h1 className="  mb-2 robotoFont text-sm xsm:text-base ">
           Gadget hunter a well-known brand throughout the country. This
           achievement is the result of Gadget Hunter's unwavering dedication to
           customer satisfaction. With a core focus on meeting the needs of
@@ -21,7 +21,7 @@ const AboutUs = () => {
           for E-Commerce platforms in Bangladesh, gaining recognition as the
           largest retailer of computer and tech products.
         </h1>
-        <h1 className=" bg-green-400 mb-2 robotoFont text-sm xsm:text-base ">
+        <h1 className="  mb-2 robotoFont text-sm xsm:text-base ">
           Gadget Hunter boasts a workforce of over 700 employees and continues
           to expand, working diligently to uphold the fundamental principles
           outlined in its motto and vision. Gadget Hunter is strategically
@@ -34,14 +34,14 @@ const AboutUs = () => {
           can be found in Gazipur, one in Khulna, one in Rajshahi, and one in
           Rangpur.
         </h1>
-        <h1 className=" bg-amber-400 mb-6 robotoFont text-sm xsm:text-base">
+        <h1 className="  mb-6 robotoFont text-sm xsm:text-base">
           In addition to its physical storefronts, Gadget Hunter operates a
           highly successful E-Commerce website.
         </h1>
-        <h1 className=" bg-amber-400 mb-3 font-semibold text-lg xsm:text-xl youngSerifFont ">
+        <h1 className="  mb-3 font-semibold text-lg xsm:text-xl youngSerifFont ">
           The Main Goal and Aim
         </h1>
-        <h1 className=" bg-amber-400 mb-6 robotoFont text-sm xsm:text-base ">
+        <h1 className="  mb-6 robotoFont text-sm xsm:text-base ">
           Gadget Hunter is dedicated to being your trusted partner for all your
           technology needs. Our primary mission is to cater to our customers'
           every requirement, ensuring their needs, desires, and wishes are met.
@@ -54,10 +54,10 @@ const AboutUs = () => {
           products delivered to their doorstep, eliminating the need for
           extensive travel.
         </h1>
-        <h1 className=" bg-amber-400 mb-3 youngSerifFont font-semibold text-lg xsm:text-xl  ">
+        <h1 className="  mb-3 youngSerifFont font-semibold text-lg xsm:text-xl  ">
           Services Being Provided
         </h1>
-        <h1 className=" bg-amber-400 mb-6  robotoFont text-sm xsm:text-base ">
+        <h1 className="  mb-6  robotoFont text-sm xsm:text-base ">
           We are a Tech-based product seller. We provide our customers with the
           best quality products at the most reasonable price. We have varieties
           of products that our customers can choose from. Each of our products
@@ -66,10 +66,10 @@ const AboutUs = () => {
           service-providing sector. We strive to become a Perfectionist Company
           that delivers everything, word for word.
         </h1>
-        <h1 className=" bg-amber-400 mb-3 youngSerifFont font-semibold text-lg xsm:text-xl ">
+        <h1 className="  mb-3 youngSerifFont font-semibold text-lg xsm:text-xl ">
           Customer Satisfaction
         </h1>
-        <h1 className=" bg-amber-400 mb-6 robotoFont text-sm xsm:text-base ">
+        <h1 className="  mb-6 robotoFont text-sm xsm:text-base ">
           With our extensive presence in the market, we've gained valuable
           insights into our customers' needs and desires. These insights have
           driven us to adapt and evolve our offerings to better cater to each
@@ -83,10 +83,10 @@ const AboutUs = () => {
           concerns.
         </h1>
 
-        <h1 className=" bg-amber-400 mb-3 youngSerifFont font-semibold text-lg xsm:text-xl ">
+        <h1 className="  mb-3 youngSerifFont font-semibold text-lg xsm:text-xl ">
           The Brand That Cares For You
         </h1>
-        <h1 className=" bg-amber-400  robotoFont text-sm xsm:text-base ">
+        <h1 className="   robotoFont text-sm xsm:text-base ">
           This is Gadget Hunter! A brand deeply committed to its customers,
           diligently fulfilling all their requirements. Customer satisfaction is
           our foremost concern, with a 'Customers First' approach at the core of

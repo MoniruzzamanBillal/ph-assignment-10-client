@@ -30,10 +30,11 @@ const BrandDetail = () => {
   // console.log(filterData);
 
   return (
-    <div className="brandDetailContainer bg-green-300 pt-[4rem] ">
-      <div className="brandDetailWrapper py-4 bg-blue-300 w-[99%] xsm:w-[96%] lg:w-[90%] m-auto  ">
+    <div className="brandDetailContainer bg-[#CFF5E7] pt-[4rem] ">
+      {/* <div className="brandDetailWrapper py-4 bg-blue-300 w-[99%] xsm:w-[96%] lg:w-[90%] m-auto  "> */}
+      <div className="brandDetailWrapper pb-7  m-auto  ">
         {/* advertise slider  */}
-        <div className="advertiseSlider bg-red-400 mb-6  w-[100%] h-[17rem] xsm:h-[20rem] sm:h-[23rem] md:h-[26rem] xmd:h-[29rem] lg:h-[32rem] overflow-auto ">
+        <div className="advertiseSlider  mb-6  w-[100%] h-[17rem] xsm:h-[20rem] sm:h-[23rem] md:h-[26rem] xmd:h-[29rem] lg:h-[32rem] overflow-auto ">
           {/* slider  */}
 
           {filterData &&
@@ -56,13 +57,15 @@ const BrandDetail = () => {
         {/* advertise slider  */}
 
         {/* all products of brand  */}
-        <div className="allProductsContainer bg-lime-300 ">
-          <h1 className=" text-3xl mb-3 font-semibold ">Our products </h1>
+        <div className="allProductsContainer  w-[99%] xsm:w-[96%] lg:w-[90%] m-auto ">
+          <h1 className=" pocificoFont text-4xl pt-5 pb-9 font-semibold ">
+            Our products{" "}
+          </h1>
 
           {/*  */}
 
           {/* all products card  */}
-          <div className="products bg-pink-300 grid grid-cols-3 gap-x-4 gap-y-6 ">
+          <div className="products  grid grid-cols-1 xsm:grid-cols-2 xmd:grid-cols-3 lg:grid-cols-4 gap-x-3 gap-y-6 ">
             {phoneData.map((product, ind) => (
               <ProductCard key={ind} product={product} />
             ))}
