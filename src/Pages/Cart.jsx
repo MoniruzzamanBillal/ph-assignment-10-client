@@ -1,6 +1,27 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { AppContext } from "../Context/AuthContext";
+import { useParams, useLoaderData } from "react-router-dom";
 
 const Cart = () => {
+  const { user } = useContext(AppContext);
+  const responseData = useLoaderData();
+  const [cartData, setCartData] = useState(responseData);
+  const [filterData, setFilterData] = useState([]);
+
+  const loggedUser = user.uid;
+  // console.log(loggedUser);
+  // console.log(cartData);
+
+  useEffect(() => {
+    const filterItem = cartData.filter(
+      (data) => data.loggedUser === loggedUser
+    );
+
+    // console.log(filterItem);
+
+    setFilterData(filterItem);
+  }, []);
+
   return (
     <div>
       {/*  */}
