@@ -6,7 +6,7 @@ const AddProduct = () => {
     // console.log("submit click");
     const form = e.target;
 
-    const brandName = form.brand.value;
+    const brandName = form.brand.value.toUpperCase();
     const productName = form.productName.value;
     const productImg = form.image.value;
     const category = form.category.value;
@@ -34,10 +34,10 @@ const AddProduct = () => {
       body: JSON.stringify(newItemObj),
     };
 
-    fetch(`http://localhost:5000/product`, fetchMethod)
-      .then((response) => response.json())
-      .then((data) => console.log(data))
-      .catch((error) => console.log(error));
+    // fetch(`http://localhost:5000/product`, fetchMethod)
+    //   .then((response) => response.json())
+    //   .then((data) => console.log(data))
+    //   .catch((error) => console.log(error));
   };
 
   return (

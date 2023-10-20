@@ -1,32 +1,6 @@
 import React from "react";
 import BrandCard from "./BrandCard";
-
-const BrandsItem = [
-  {
-    brandName: "xiaomi",
-    imgLink: "https://i.ibb.co/9NNPq9d/xiaomi.jpg",
-  },
-  {
-    brandName: "Walton",
-    imgLink: "https://i.ibb.co/k3C2Zj5/walton.jpg",
-  },
-  {
-    brandName: "Samsung",
-    imgLink: "https://i.ibb.co/R9sHpjR/samsung.png",
-  },
-  {
-    brandName: "One plus",
-    imgLink: "https://i.ibb.co/09HXwYK/oneplus-new8781.jpg",
-  },
-  {
-    brandName: "JBL",
-    imgLink: "https://i.ibb.co/XFsyRkx/jbl.png",
-  },
-  {
-    brandName: "Amazfit",
-    imgLink: "https://i.ibb.co/n6b2Fnz/amazfit-logot-1.png",
-  },
-];
+import { BrandsItem } from "../Utility/BrandName";
 
 const Brand = () => {
   return (
@@ -39,7 +13,9 @@ const Brand = () => {
         {/* brand card  */}
         <div className="brandCardContainer  grid grid-cols-1 xsm:grid-cols-2 xmd:grid-cols-3 gap-x-3 gap-y-6  ">
           {BrandsItem &&
-            BrandsItem.map((ele, ind) => <BrandCard key={ind} ele={ele} />)}
+            BrandsItem.map((brand, ind) => (
+              <BrandCard key={ind} brand={brand} />
+            ))}
         </div>
         {/* brand card  */}
       </div>

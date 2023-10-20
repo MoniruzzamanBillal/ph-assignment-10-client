@@ -7,6 +7,9 @@ import Cart from "../Pages/Cart";
 import Login from "../Pages/Login";
 import Test from "../Components/Test";
 import Register from "../Pages/Register";
+import AboutUs from "../Pages/AboutUs";
+import BrandDetail from "../Pages/BrandDetail";
+import ProductDetail from "../Pages/ProductDetail";
 
 export const Router = createBrowserRouter([
   {
@@ -17,10 +20,7 @@ export const Router = createBrowserRouter([
         path: "/",
         element: <Home />,
       },
-      {
-        path: "/brand",
-        element: <Brand />,
-      },
+
       {
         path: "/addproduct",
         element: <AddProduct />,
@@ -36,6 +36,18 @@ export const Router = createBrowserRouter([
       {
         path: "/register",
         element: <Register />,
+      },
+      {
+        path: "/aboutus",
+        element: <AboutUs />,
+      },
+      {
+        path: "/brand/:name",
+        element: <BrandDetail />,
+      },
+      {
+        path: "/brand/product",
+        element: <ProductDetail />,
       },
       {
         path: "/test",

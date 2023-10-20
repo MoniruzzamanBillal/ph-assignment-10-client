@@ -5,6 +5,7 @@ import Products from "./Products";
 import Category from "./Category";
 import Stats from "./Stats";
 import QualityAssurance from "./QualityAssurance";
+import Contactus from "./Contactus";
 
 const Home = () => {
   return (
@@ -44,6 +45,12 @@ const Home = () => {
         <QualityAssurance />
       </div>
       {/* quality container  */}
+
+      {/* contact us conytainer  */}
+      <div className="contactUs">
+        <Contactus />
+      </div>
+      {/* contact us conytainer  */}
 
       {/*  */}
     </div>

@@ -1,5 +1,9 @@
 import React from "react";
 
+import { AiOutlineLaptop } from "react-icons/ai";
+import { BiLock } from "react-icons/bi";
+import { BsShieldShaded, BsBoxSeam } from "react-icons/bs";
+
 const QualityAssurance = () => {
   return (
     <div className="qualityContainer bg-orange-400 py-4  ">
@@ -12,10 +16,7 @@ const QualityAssurance = () => {
               <div className=" w-[40%] bg-violet-400 flex justify-center  align-middle rounded-lg  dark:bg-violet-400">
                 {/* left icon  */}
                 <div className="leftIcon bg-pink-300  flex justify-center items-center self-center ">
-                  <img
-                    src="../../public/images/stats icon/icons8-laptop-and-phone-64.png"
-                    alt=""
-                  />
+                  <AiOutlineLaptop className=" text-6xl " />
                 </div>
                 {/* left icon  */}
               </div>
@@ -36,10 +37,7 @@ const QualityAssurance = () => {
               <div className=" w-[40%] bg-violet-400 flex justify-center  align-middle rounded-lg  dark:bg-violet-400">
                 {/* left icon  */}
                 <div className="leftIcon bg-pink-300 flex justify-center items-center ">
-                  <img
-                    src="../../public/images/stats icon/icons8-shield-64.png"
-                    alt=""
-                  />
+                  <BsShieldShaded className=" text-6xl " />
                 </div>
                 {/* left icon  */}
               </div>
@@ -60,10 +58,7 @@ const QualityAssurance = () => {
               <div className=" w-[40%] bg-violet-400 flex justify-center  align-middle rounded-lg  dark:bg-violet-400">
                 {/* left icon  */}
                 <div className="leftIcon bg-pink-300 flex justify-center items-center self-center  ">
-                  <img
-                    src="../../public/images/stats icon/icons8-box-64.png"
-                    alt=""
-                  />
+                  <BsBoxSeam className=" text-6xl " />
                 </div>
                 {/* left icon  */}
               </div>
@@ -84,10 +79,7 @@ const QualityAssurance = () => {
               <div className=" w-[40%] bg-violet-400 flex justify-center  align-middle rounded-lg  dark:bg-violet-400">
                 {/* left icon  */}
                 <div className="leftIcon bg-pink-300 flex justify-center items-center self-center ">
-                  <img
-                    src="../../public/images/stats icon/icons8-lock-64.png"
-                    alt=""
-                  />
+                  <BiLock className=" text-6xl " />
                 </div>
                 {/* left icon  */}
               </div>

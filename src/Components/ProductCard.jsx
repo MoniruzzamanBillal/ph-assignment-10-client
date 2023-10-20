@@ -2,11 +2,11 @@ import React from "react";
 
 const ProductCard = () => {
   return (
-    <div className="productCardContainer  ">
+    <div className="productCardContainer   ">
       <div className="productCardWrapper">
         {/* card  */}
 
-        <div class=" relative max-w-sm overflow-auto  bg-gray-100 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <div class=" relative max-w-sm overflow-auto hover:shadow-md hover:scale-105 duration-500  bg-gray-100 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
           {/* product imag  */}
           <div className="productImg bg-red-600  ">
             <div className="productImgWrapper bg-blue-500 w-[80%] m-auto  ">

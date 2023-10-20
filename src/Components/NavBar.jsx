@@ -15,7 +15,7 @@ const navLink = [
   },
   {
     item: "About us",
-    link: "/",
+    link: "/aboutus",
   },
   {
     item: "My Cart",
