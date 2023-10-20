@@ -143,11 +143,11 @@ const AddProduct = () => {
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 "
                 >
                   <option value="">Select category</option>
-                  <option value="mobile">Mobile phone</option>
-                  <option value="earphone">Earphone</option>
-                  <option value="adapter">Adapter</option>
-                  <option value="smart_watch">Smart watch</option>
-                  <option value="power_bank">Power bank</option>
+                  <option value="Mobile phone">Mobile phone</option>
+                  <option value="Earphone">Earphone</option>
+                  <option value="Adapter">Adapter</option>
+                  <option value="Smart watch">Smart watch</option>
+                  <option value="Power bank">Power bank</option>
                 </select>
               </div>
 

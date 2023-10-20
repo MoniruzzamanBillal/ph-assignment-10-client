@@ -11,6 +11,7 @@ import AboutUs from "../Pages/AboutUs";
 import BrandDetail from "../Pages/BrandDetail";
 import ProductDetail from "../Pages/ProductDetail";
 import UpdateProduct from "../Pages/UpdateProduct";
+import CategoryProducts from "../Pages/CategoryProducts";
 
 export const Router = createBrowserRouter([
   {
@@ -24,8 +25,13 @@ export const Router = createBrowserRouter([
       },
 
       {
-        path: "/addproduct/:id",
+        path: "/addproduct",
         element: <AddProduct />,
+      },
+      {
+        path: "/category/:name",
+        element: <CategoryProducts />,
+        loader: () => fetch("http://localhost:5000/all_items"),
       },
       {
         path: "/update/:id",

@@ -39,7 +39,7 @@ const NavBar = () => {
   };
 
   return (
-    <div className="navContainer  py-2 bg-[#d09cf0]  fixed w-full z-20 drop-shadow-lg ">
+    <div className="navContainer  z-50 py-2 bg-[#d09cf0]  fixed w-full z-20 drop-shadow-lg ">
       <div className="navWrapper flex justify-between w-[97%] xsm:w-[96%] lg:w-[94%] m-auto items-center ">
         {/* nav left  */}
         <div className="navLeft  ">

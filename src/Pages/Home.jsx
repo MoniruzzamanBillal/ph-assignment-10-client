@@ -11,7 +11,7 @@ import { useLoaderData } from "react-router-dom";
 const Home = () => {
   const all_product = useLoaderData();
 
-  // console.log(all_product);
+  console.log(all_product);
 
   return (
     <div>
