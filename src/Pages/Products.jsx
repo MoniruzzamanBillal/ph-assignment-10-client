@@ -1,7 +1,9 @@
 import React from "react";
 import ProductCard from "../Components/ProductCard";
 
-const Products = () => {
+const Products = ({ all_product }) => {
+  // console.log(all_product);
+
   return (
     <div className="brandContainer bg-red-300 py-6 ">
       <div className="brandWrapper bg-violet-300 w-[99%] xsm:w-[96%] lg:w-[90%] m-auto">
@@ -10,7 +12,9 @@ const Products = () => {
         </h1>
 
         <div className="productCardContainer bg-lime-400 grid grid-cols-4 gap-x-4 gap-y-6  ">
-          <ProductCard />
+          {all_product.map((product, ind) => (
+            <ProductCard product={product} key={ind} />
+          ))}
         </div>
       </div>
     </div>

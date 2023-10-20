@@ -6,7 +6,7 @@ const AddProduct = () => {
     // console.log("submit click");
     const form = e.target;
 
-    const brandName = form.brand.value.toUpperCase();
+    const brandName = form.brand.value;
     const productName = form.productName.value;
     const productImg = form.image.value;
     const category = form.category.value;
@@ -34,10 +34,23 @@ const AddProduct = () => {
       body: JSON.stringify(newItemObj),
     };
 
-    // fetch(`http://localhost:5000/product`, fetchMethod)
-    //   .then((response) => response.json())
-    //   .then((data) => console.log(data))
-    //   .catch((error) => console.log(error));
+    fetch(`http://localhost:5000/product`, fetchMethod)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        if (data.insertedId) {
+          alert("item added successfully");
+        }
+      })
+      .catch((error) => console.log(error));
+
+    form.brand.value = "";
+    form.productName.value = "";
+    form.image.value = "";
+    form.category.value = "";
+    form.price.value = "";
+    form.rating.value = "";
+    form.description.value = "";
   };
 
   return (
@@ -130,11 +143,11 @@ const AddProduct = () => {
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 "
                 >
                   <option value="">Select category</option>
-                  <option value="TV">Mobile phone</option>
-                  <option value="PC">Earphone</option>
-                  <option value="GA">Adapter</option>
-                  <option value="PH">Smart watch</option>
-                  <option value="PH">Power bank</option>
+                  <option value="mobile">Mobile phone</option>
+                  <option value="earphone">Earphone</option>
+                  <option value="adapter">Adapter</option>
+                  <option value="smart_watch">Smart watch</option>
+                  <option value="power_bank">Power bank</option>
                 </select>
               </div>
 

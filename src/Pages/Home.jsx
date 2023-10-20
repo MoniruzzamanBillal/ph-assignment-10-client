@@ -6,8 +6,13 @@ import Category from "./Category";
 import Stats from "./Stats";
 import QualityAssurance from "./QualityAssurance";
 import Contactus from "./Contactus";
+import { useLoaderData } from "react-router-dom";
 
 const Home = () => {
+  const all_product = useLoaderData();
+
+  // console.log(all_product);
+
   return (
     <div>
       {/* hero Component */}
@@ -30,7 +35,7 @@ const Home = () => {
 
       {/* products container  */}
       <div className="productContainer">
-        <Products />
+        <Products all_product={all_product} />
       </div>
       {/* products container  */}
 

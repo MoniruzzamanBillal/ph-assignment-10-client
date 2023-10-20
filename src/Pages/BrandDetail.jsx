@@ -36,11 +36,11 @@ const BrandDetail = () => {
             filterData.map((data) => (
               <Carousel slideInterval={5000}>
                 {data.advertiseImg.map((advertise, ind) => (
-                  <div key={ind}>
+                  <div key={ind} className=" w-full h-full  ">
                     <img
                       alt="..."
                       src={advertise.img}
-                      className=" w-full h-full "
+                      className=" w-full h-full bg-cover "
                     />
                   </div>
                 ))}

@@ -1,6 +1,18 @@
 import React from "react";
 
-const ProductCard = () => {
+const ProductCard = ({ product }) => {
+  // console.log(product);
+
+  const {
+    brandName,
+    category,
+    price,
+    productDescription,
+    productImg,
+    productName,
+    rating,
+  } = product;
+
   return (
     <div className="productCardContainer   ">
       <div className="productCardWrapper">
@@ -8,13 +20,9 @@ const ProductCard = () => {
 
         <div class=" relative max-w-sm overflow-auto hover:shadow-md hover:scale-105 duration-500  bg-gray-100 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
           {/* product imag  */}
-          <div className="productImg bg-red-600  ">
-            <div className="productImgWrapper bg-blue-500 w-[80%] m-auto  ">
-              <img
-                class=" w-full h-full "
-                src="https://i.ibb.co/Wt8sgSm/redmi-note-11.png"
-                alt=""
-              />
+          <div className="productImg bg-red-500   ">
+            <div className="productImgWrapper bg-blue-500 w-[100%] h-[16rem] m-auto  ">
+              <img class=" w-full h-full " src={productImg} alt="" />
             </div>
           </div>
           {/* product imag  */}
@@ -23,14 +31,14 @@ const ProductCard = () => {
             {/* brand name  */}
             <div className="brandContainer inline whitespace-nowrap bg-yellow-200  absolute transform -translate-x-1/2 -translate-y-1/2 top-3 left-[88%]  ">
               <h1 className=" dancingFont font-semibold text-sm ">
-                brand name{" "}
+                {brandName}
               </h1>
             </div>
             {/* brand name  */}
 
             {/* product name  */}
             <h1 className=" robotoFont font-semibold  text-sm mb-2 ">
-              Xiaomi Redmi Note 11
+              {productName}
             </h1>
             {/* product name  */}
 
@@ -38,7 +46,7 @@ const ProductCard = () => {
 
             <div className="categoryContainer  whitespace-nowrap bg-yellow-200  absolute transform -translate-x-1/2 -translate-y-1/2 top-3 left-[20%]  ">
               <h1 className=" robotoFont text-xs font-semibold ">
-                category:phone
+                category: {category}
               </h1>
             </div>
 
@@ -46,13 +54,13 @@ const ProductCard = () => {
 
             {/* product price  */}
             <h1 className="robotoFont text-sm font-semibold mb-2 ">
-              price : 450$
+              price : {price} $
             </h1>
             {/* product price  */}
 
             {/* product rating  */}
             <h1 className="robotoFont text-sm font-semibold mb-4 ">
-              rating:4.5/5
+              rating:{rating}/5
             </h1>
             {/* product rating  */}
 
