@@ -7,10 +7,11 @@ import { BrandsItem } from "../Utility/BrandName";
 const BrandDetail = () => {
   const responseData = useLoaderData();
   const { name } = useParams();
+
   const [filterData, setFilterData] = useState([]);
   const [phoneData, setPhoneData] = useState(responseData);
 
-  console.log(phoneData);
+  // console.log(phoneData);
   // console.log(name);
 
   // console.log(BrandsItem);

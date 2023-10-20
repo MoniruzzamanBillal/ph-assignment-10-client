@@ -1,6 +1,10 @@
 import React from "react";
 
+import { useNavigate } from "react-router-dom";
+
 const ProductCard = ({ product }) => {
+  const navigate = useNavigate();
+
   // console.log(product);
 
   const {
@@ -11,7 +15,15 @@ const ProductCard = ({ product }) => {
     productImg,
     productName,
     rating,
+    _id,
   } = product;
+
+  const handleDetail = (id) => {
+    // console.log("details button click");
+    console.log(id);
+
+    navigate(`/product/${id}`);
+  };
 
   return (
     <div className="productCardContainer   ">
@@ -65,8 +77,11 @@ const ProductCard = ({ product }) => {
             {/* product rating  */}
 
             {/* details button  */}
-            <div className="detailBtn bg-red-400 mb-1 active:scale-95 cursor-pointer rounded text-center ">
-              <button className="robotoFont py-1.5 font-semibold text-gray-50  ">
+            <div
+              className="detailBtn bg-red-400 mb-1 active:scale-95 cursor-pointer rounded text-center "
+              onClick={() => handleDetail(_id)}
+            >
+              <button className="robotoFont py-1.5 font-semibold text-gray-50 ">
                 Details
               </button>
             </div>
