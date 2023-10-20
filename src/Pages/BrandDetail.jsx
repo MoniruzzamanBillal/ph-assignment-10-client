@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from "react";
 import ProductCard from "../Components/ProductCard";
 import { Carousel } from "flowbite-react";
-import { useParams } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 import { BrandsItem } from "../Utility/BrandName";
 
 const BrandDetail = () => {
+  const responseData = useLoaderData();
   const { name } = useParams();
   const [filterData, setFilterData] = useState([]);
+  const [phoneData, setPhoneData] = useState(responseData);
 
+  console.log(phoneData);
   // console.log(name);
 
   // console.log(BrandsItem);
@@ -59,7 +62,11 @@ const BrandDetail = () => {
 
           {/* all products card  */}
           <div className="products bg-pink-300 grid grid-cols-3 gap-x-4 gap-y-6 ">
-            <ProductCard />
+            {phoneData.map((product, ind) => (
+              <ProductCard key={ind} product={product} />
+            ))}
+
+            {/* <ProductCard /> */}
           </div>
           {/* all products card  */}
         </div>
