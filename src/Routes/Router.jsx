@@ -10,6 +10,7 @@ import Register from "../Pages/Register";
 import AboutUs from "../Pages/AboutUs";
 import BrandDetail from "../Pages/BrandDetail";
 import ProductDetail from "../Pages/ProductDetail";
+import UpdateProduct from "../Pages/UpdateProduct";
 
 export const Router = createBrowserRouter([
   {
@@ -23,8 +24,12 @@ export const Router = createBrowserRouter([
       },
 
       {
-        path: "/addproduct",
+        path: "/addproduct/:id",
         element: <AddProduct />,
+      },
+      {
+        path: "/update/:id",
+        element: <UpdateProduct />,
       },
       {
         path: "/cart",

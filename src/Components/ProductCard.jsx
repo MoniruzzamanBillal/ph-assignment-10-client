@@ -20,9 +20,16 @@ const ProductCard = ({ product }) => {
 
   const handleDetail = (id) => {
     // console.log("details button click");
-    console.log(id);
+    // console.log(id);
 
     navigate(`/product/${id}`);
+  };
+
+  // for update
+  const handleUpdate = (id) => {
+    // console.log("update");
+    // console.log(id);
+    navigate(`/update/${id}`);
   };
 
   return (
@@ -88,7 +95,10 @@ const ProductCard = ({ product }) => {
             {/* details button  */}
 
             {/* update button  */}
-            <div className="updateBtn bg-lime-400 active:scale-95 cursor-pointer rounded text-center  ">
+            <div
+              className="updateBtn bg-lime-400 active:scale-95 cursor-pointer rounded text-center  "
+              onClick={() => handleUpdate(_id)}
+            >
               <button className="robotoFont py-1.5 font-semibold text-gray-50 ">
                 Update
               </button>
