@@ -39,7 +39,7 @@ const NavBar = () => {
   };
 
   return (
-    <div className="navContainer  z-50 py-2 bg-[#d09cf0]  fixed w-full z-20 drop-shadow-lg ">
+    <div className="navContainer  z-50 py-2 bg-[#5C8374]  fixed w-full drop-shadow-lg ">
       <div className="navWrapper flex justify-between w-[97%] xsm:w-[96%] lg:w-[94%] m-auto items-center ">
         {/* nav left  */}
         <div className="navLeft  ">
@@ -52,7 +52,7 @@ const NavBar = () => {
                 <div className="logo w-[2.1rem] h-[2.1rem] xsm:w-[2.6rem] xsm:h-[2.5rem] sm:w-[2.8rem] sm:h-[2.7rem]  rounded-md overflow-auto ">
                   <img src="/logo.jpg" className="  w-full h-full " alt="" />{" "}
                 </div>
-                <p className=" text-sm xsm:text-base lg:text-xl pl-1.5 dancingFont ">
+                <p className=" text-white text-sm xsm:text-base lg:text-xl pl-1.5 dancingFont ">
                   Gadget hunter
                 </p>
               </div>
@@ -118,13 +118,6 @@ const NavBar = () => {
                 Log in
               </Link>
             )}
-
-            {/* <Link
-              to={`/login`}
-              className=" bg-gray-600 py-2 px-3 lg:px-4  text-white font-semibold text-xs lg:text-sm "
-            >
-              Log in
-            </Link> */}
           </div>
 
           {/* !mobile view  */}
@@ -144,7 +137,7 @@ const NavBar = () => {
             {/* menu list  */}
 
             {toggle && (
-              <div className="menuList text-center py-2 bg-[#9400FF] absolute transform -translate-x-1/2 -translate-y-1/2 -right-[4.8rem] top-[7.1rem] sm:top-[7.4rem] w-[10rem] ">
+              <div className="menuList text-center py-2 bg-[#183D3D] absolute transform -translate-x-1/2 -translate-y-1/2 -right-[4.8rem] top-[7.1rem] sm:top-[7.4rem] w-[10rem] ">
                 <div className="menuItem mb-4  ">
                   {navLink.map((ele, ind) => (
                     <div

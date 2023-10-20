@@ -34,7 +34,7 @@ const ProductCard = ({ product }) => {
   };
 
   return (
-    <div className="productCardContainer   ">
+    <div className="productCardContainer  m-auto ">
       <div className="productCardWrapper">
         {/* card  */}
 
@@ -65,9 +65,7 @@ const ProductCard = ({ product }) => {
             {/* product type  */}
 
             <div className="categoryContainer  whitespace-nowrap bg-yellow-200  absolute transform -translate-x-1/2 -translate-y-1/2 top-3 left-[20%]  ">
-              <h1 className=" robotoFont text-xs font-semibold ">
-                category: {category}
-              </h1>
+              <h1 className=" robotoFont text-xs font-semibold ">{category}</h1>
             </div>
 
             {/* product type  */}
@@ -87,7 +85,7 @@ const ProductCard = ({ product }) => {
             {/* details button  */}
             <div className="detailBtn bg-red-400 mb-1 active:scale-95 cursor-pointer rounded text-center  ">
               <button
-                className="robotoFont py-1.5 bg-blue-500 w-full font-semibold text-gray-50 "
+                className="robotoFont py-1.5 bg-violet-500 rounded w-full font-semibold text-gray-50 "
                 onClick={user ? () => handleDetail(_id) : () => handleDisable()}
               >
                 Details

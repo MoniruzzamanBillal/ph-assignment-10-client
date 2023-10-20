@@ -2,9 +2,9 @@ import React from "react";
 
 const Contactus = () => {
   return (
-    <div className="ContactUsContainer bg-yellow-200 py-4 ">
-      <div className="contactUsWrapper bg-red-400 w-[99%] xsm:w-[96%] lg:w-[90%] m-auto ">
-        <section className="mb-3 bg-gray-200 ">
+    <div className="ContactUsContainer bg-[#C4DFDF] py-6 ">
+      <div className="contactUsWrapper  w-[99%] xsm:w-[96%] lg:w-[90%] m-auto ">
+        <section className="mb-3 bg-gray-200 p-2 ">
           <div className="flex justify-center">
             <div className="text-center md:max-w-xl lg:max-w-3xl">
               <h2 className="mb-12 px-6 text-3xl font-bold">Contact us</h2>
@@ -12,7 +12,7 @@ const Contactus = () => {
           </div>
 
           <div className="flex flex-wrap">
-            <div className="mb-12 bg-blue-100 rounded py-3 w-full shrink-0 grow-0 basis-auto md:px-3 lg:mb-0 lg:w-5/12 lg:px-6">
+            <div className="mb-12  rounded py-3 w-full shrink-0 grow-0 basis-auto md:px-3 lg:mb-0 lg:w-5/12 lg:px-6">
               <form>
                 <div className="relative mb-6" data-te-input-wrapper-init>
                   <label
@@ -71,7 +71,7 @@ const Contactus = () => {
                 </button>
               </form>
             </div>
-            <div className=" bg-red-500 shrink-0 grow-0 basis-auto lg:w-7/12">
+            <div className="  p-3 w-full shrink-0 grow-0 basis-auto lg:w-7/12">
               <div className="flex flex-wrap">
                 {/*  */}
                 <div className="mb-12  bg-blue-300 border border-gray-100 w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:px-6">
@@ -182,7 +182,7 @@ const Contactus = () => {
 
                 {/*  */}
 
-                <div className="mb-12 w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:px-6"></div>
+                <div className=" w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:px-6"></div>
               </div>
             </div>
           </div>

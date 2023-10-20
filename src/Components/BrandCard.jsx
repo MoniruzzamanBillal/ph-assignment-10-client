@@ -6,7 +6,7 @@ const BrandCard = ({ brand }) => {
 
   const handleClick = (brand_name) => {
     // console.log("clicked");
-    console.log(brand_name);
+    // console.log(brand_name);
 
     navigate(`/brand/${brand_name}`);
   };
@@ -14,10 +14,10 @@ const BrandCard = ({ brand }) => {
   return (
     <div>
       <div
-        className="max-w-sm bg-white border border-gray-200 cursor-pointer shadow transform hover:scale-105 hover:drop-shadow-lg duration-300  rounded-lg overflow-auto  m-auto "
+        className=" w-[78%] xsm:w-auto  max-w-sm bg-gray-100 border border-gray-200 cursor-pointer shadow transform hover:scale-105 hover:drop-shadow-lg duration-300  rounded-lg overflow-auto  m-auto "
         onClick={() => handleClick(brandName)}
       >
-        <div className="brandImg bg-red-400 m-auto w-[100%] h-[9rem] xmd:h-[12rem]  ">
+        <div className="brandImg bg-red-400 m-auto w-[100%] h-[8rem] sm:h-[9rem] xmd:h-[12rem]  ">
           <img className=" w-full h-full " src={imgLink} alt="" />
         </div>
         <div className="  ">

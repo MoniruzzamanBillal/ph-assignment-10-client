@@ -2,11 +2,11 @@ import React from "react";
 
 const Stats = () => {
   return (
-    <div className="statsCopntainer bg-violet-500 py-4 ">
-      <div className="statsWrapper bg-sky-400 w-[99%] xsm:w-[96%] lg:w-[90%] m-auto ">
+    <div className="statsCopntainer bg-[#EEEEEE] py-4 ">
+      <div className="statsWrapper  w-[99%] xsm:w-[96%] lg:w-[90%] m-auto ">
         <section className="p-6 my-6 m-auto dark:bg-gray-800 dark:text-gray-100">
-          <div className="container bg-red-400 grid grid-cols-1 gap-6 mx-auto sm:grid-cols-2 xl:grid-cols-4">
-            <div className="flex bg-lime-300 m-auto p-4 space-x-4 rounded-lg md:space-x-6 dark:bg-gray-900 dark:text-gray-100">
+          <div className="container  grid grid-cols-1 gap-6 mx-auto sm:grid-cols-2 xl:grid-cols-4">
+            <div className="flex bg-[#F1D4E5] m-auto p-4 space-x-4 rounded-lg md:space-x-6 ">
               <div className="flex justify-center p-2 align-middle rounded-lg sm:p-4 dark:bg-violet-400">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -19,12 +19,12 @@ const Stats = () => {
                   <path d="M400.984,368.344a64.073,64.073,0,0,0-64,64h0a64,64,0,0,0,128,0h0A64.072,64.072,0,0,0,400.984,368.344Zm0,96a32,32,0,1,1,32-32A32.038,32.038,0,0,1,400.984,464.344Z"></path>
                 </svg>
               </div>
-              <div className="flex flex-col justify-center align-middle m-auto bg-lime-300 ">
+              <div className="flex flex-col justify-center align-middle m-auto  ">
                 <p className="text-3xl font-semibold leadi">2000+</p>
                 <p className="capitalize">Orders</p>
               </div>
             </div>
-            <div className="flex m-auto p-4 space-x-4 rounded-lg md:space-x-6 dark:bg-gray-900 dark:text-gray-100">
+            <div className="flex m-auto bg-[#F1D4E5] p-4 space-x-4 rounded-lg md:space-x-6 ">
               <div className="flex justify-center p-2 align-middle rounded-lg sm:p-4 dark:bg-violet-400">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -43,7 +43,7 @@ const Stats = () => {
                 <p className="capitalize">New customers</p>
               </div>
             </div>
-            <div className="flex m-auto p-4 space-x-4 rounded-lg md:space-x-6 dark:bg-gray-900 dark:text-gray-100">
+            <div className="flex m-auto p-4 space-x-4 rounded-lg md:space-x-6 bg-[#F1D4E5]">
               <div className="flex justify-center p-2 align-middle rounded-lg sm:p-4 dark:bg-violet-400">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -64,7 +64,7 @@ const Stats = () => {
                 <p className="capitalize">Growth</p>
               </div>
             </div>
-            <div className="flex m-auto p-4 space-x-4 rounded-lg md:space-x-6 dark:bg-gray-900 dark:text-gray-100">
+            <div className="flex m-auto p-4 space-x-4 rounded-lg md:space-x-6 bg-[#F1D4E5]">
               <div className="flex justify-center p-2 align-middle rounded-lg sm:p-4 dark:bg-violet-400">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

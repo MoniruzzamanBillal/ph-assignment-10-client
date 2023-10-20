@@ -26,8 +26,8 @@ const productsCategory = [
 
 const Category = () => {
   return (
-    <div className="categoryContainer bg-green-400 py-8  ">
-      <div className="categoryWrapper relative bg-amber-300 w-[99%] xsm:w-[96%] lg:w-[90%] m-auto ">
+    <div className="categoryContainer bg-[#EEEEEE] py-8  ">
+      <div className="categoryWrapper relative  w-[99%] xsm:w-[96%] lg:w-[90%] m-auto ">
         {/* left line  */}
         <div className="leftLine h-[.1rem] sm:w-[26%] md:w-[29%] xmd:w-[32%] lg:w-[35%] absolute transform -translate-x-1/2 -translate-y-1/2 top-5 left-[20%] bg-red-600 "></div>
         {/* left line  */}
@@ -36,12 +36,12 @@ const Category = () => {
         <div className="rightLine h-[.1rem]  sm:w-[26%] md:w-[29%] xmd:w-[32%] lg:w-[35%] absolute transform -translate-x-1/2 -translate-y-1/2 top-5 left-[80%] bg-blue-600 "></div>
         {/* right line  */}
 
-        <h1 className=" pocificoFont text-2xl xsm:text-3xl smd:text-4xl mb-4 xsm:mb-6 smd:mb-7 pb-1 xsm:pb-2 text-center  ">
+        <h1 className=" pocificoFont text-gray-700 text-2xl xsm:text-3xl smd:text-4xl mb-7 xsm:mb-8 md:mb-12 pb-1 xsm:pb-2 text-center  ">
           Shop by category
         </h1>
 
         {/* category card  */}
-        <div className="categoryCard bg-blue-300 grid grid-cols-1 xsm:grid-cols-2 sm:grid-cols-3 xmd:grid-cols-4 gap-x-3 gap-y-5 ">
+        <div className="categoryCard  grid grid-cols-1 xsm:grid-cols-2 sm:grid-cols-3 xmd:grid-cols-4 gap-x-3 gap-y-5 ">
           {productsCategory &&
             productsCategory.map((product, ind) => (
               <CategoryCard key={ind} product={product} />
