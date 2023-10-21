@@ -25,7 +25,7 @@ const CategoryCard = ({ product }) => {
       </div>
 
       <h1
-        className=" mt-1 text-lg font-semibold cursor-pointer"
+        className=" mt-1 text-lg font-semibold cursor-pointer dark:text-gray-100 "
         onClick={() => handleCategory()}
       >
         {productName}{" "}

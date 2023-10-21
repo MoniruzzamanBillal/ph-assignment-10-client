@@ -38,10 +38,10 @@ const ProductCard = ({ product }) => {
       <div className="productCardWrapper">
         {/* card  */}
 
-        <div class=" relative max-w-sm overflow-auto hover:shadow-md hover:scale-105 duration-500  bg-gray-100 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <div class=" relative max-w-sm overflow-auto hover:shadow-md hover:scale-105 duration-500  bg-gray-100 border border-gray-200 rounded-lg shadow ">
           {/* product imag  */}
-          <div className="productImg bg-red-500   ">
-            <div className="productImgWrapper bg-blue-500 w-[100%] h-[16rem] m-auto  ">
+          <div className="productImg  ">
+            <div className="productImgWrapper  w-[100%] h-[16rem] m-auto  ">
               <img class=" w-full h-full " src={productImg} alt="" />
             </div>
           </div>

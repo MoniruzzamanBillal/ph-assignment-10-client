@@ -28,11 +28,8 @@ const NavBar = () => {
   const [toggle, setToggle] = useState(false);
 
   // toggle dark theme
-
   const handleTheme = () => {
-    console.log("click");
     toggleTheme();
-
     document.documentElement.classList.toggle("dark");
   };
 

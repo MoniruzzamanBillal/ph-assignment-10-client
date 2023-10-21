@@ -6,9 +6,9 @@ import { BsShieldShaded, BsBoxSeam } from "react-icons/bs";
 
 const QualityAssurance = () => {
   return (
-    <div className="qualityContainer bg-[#F1D4E5] py-4  ">
+    <div className="qualityContainer bg-[#F1D4E5] dark:bg-[#4B527E]  py-4  ">
       <div className="qualityWrapper  w-[99%] xsm:w-[96%] lg:w-[90%] m-auto  ">
-        <section className="p-6 my-6 m-auto dark:bg-gray-800 dark:text-gray-100">
+        <section className="p-6 my-6 m-auto ">
           <div className="container  grid grid-cols-1 gap-6 mx-auto sm:grid-cols-2 xl:grid-cols-4">
             {/*  */}
 

@@ -2,12 +2,14 @@ import React from "react";
 
 const Contactus = () => {
   return (
-    <div className="ContactUsContainer bg-[#C4DFDF] py-6 ">
+    <div className="ContactUsContainer bg-[#C4DFDF] dark:bg-[#2E4374] py-6 ">
       <div className="contactUsWrapper  w-[99%] xsm:w-[96%] lg:w-[90%] m-auto ">
-        <section className="mb-3 bg-gray-200 p-2 ">
+        <section className="mb-3 bg-gray-200 dark:bg-[#7C81AD] p-2 ">
           <div className="flex justify-center">
             <div className="text-center md:max-w-xl lg:max-w-3xl">
-              <h2 className="mb-12 px-6 text-3xl font-bold">Contact us</h2>
+              <h2 className="mb-12 px-6 text-3xl font-bold dark:text-gray-50 ">
+                Contact us
+              </h2>
             </div>
           </div>
 
@@ -49,14 +51,14 @@ const Contactus = () => {
                 <div className="relative mb-6" data-te-input-wrapper-init>
                   <label
                     htmlFor="message"
-                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    className="block mb-2 text-sm font-medium text-gray-900 "
                   >
                     Message
                   </label>
                   <textarea
                     id="message"
                     rows="4"
-                    className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 "
                     placeholder="Message"
                   ></textarea>
                 </div>
@@ -65,7 +67,7 @@ const Contactus = () => {
                   type="button"
                   data-te-ripple-init
                   data-te-ripple-color="light"
-                  className="mb-6 inline-block w-full rounded bg-primary px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                  className="mb-6 inline-block w-full rounded bg-primary px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] "
                 >
                   Send
                 </button>
@@ -74,7 +76,7 @@ const Contactus = () => {
             <div className="  p-3 w-full shrink-0 grow-0 basis-auto lg:w-7/12">
               <div className="flex flex-wrap">
                 {/*  */}
-                <div className="mb-12  bg-blue-300 border border-gray-100 w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:px-6">
+                <div className="mb-12  bg-blue-300 dark:bg-[#7091F5] border border-gray-100 w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:px-6">
                   <div className="flex items-start  m-auto ">
                     <div className="shrink-0">
                       <div className="inline-block rounded-md bg-primary-100 p-4 text-primary">
@@ -111,7 +113,7 @@ const Contactus = () => {
                 {/*  */}
 
                 {/*  */}
-                <div className="mb-12  border border-gray-100 bg-blue-300 w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:px-6">
+                <div className="mb-12  border border-gray-100 bg-blue-300 dark:bg-[#7091F5] w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:px-6">
                   <div className="flex items-start  m-auto ">
                     <div className="shrink-0">
                       <div className="inline-block rounded-md bg-primary-100 p-4 text-primary">
@@ -147,7 +149,7 @@ const Contactus = () => {
                 {/*  */}
 
                 {/*  */}
-                <div className="mb-12  bg-blue-300 border border-gray-100 w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:px-6">
+                <div className="mb-12  bg-blue-300 dark:bg-[#7091F5] border border-gray-100 w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:px-6">
                   <div className="flex items-start m-auto ">
                     <div className="shrink-0">
                       <div className="inline-block rounded-md bg-primary-100 p-4 text-primary">

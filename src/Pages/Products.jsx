@@ -5,9 +5,9 @@ const Products = ({ all_product }) => {
   // console.log(all_product);
 
   return (
-    <div className="brandContainer bg-[#DAFFFB] py-6 ">
+    <div className="brandContainer bg-[#DAFFFB] py-6 dark:bg-[#0E2954] ">
       <div className="brandWrapper  w-[99%] xsm:w-[96%] lg:w-[90%] m-auto">
-        <h1 className=" pocificoFont text-2xl xsm:text-3xl smd:text-4xl mb-6 smd:mb-7 pb-1 xsm:pb-2 inline-block border-b border-gray-600  ">
+        <h1 className=" pocificoFont text-2xl xsm:text-3xl smd:text-4xl mb-6 smd:mb-7 pb-1 xsm:pb-2 inline-block border-b border-gray-600 dark:border-gray-100 dark:text-gray-50 ">
           Our products{" "}
         </h1>
 

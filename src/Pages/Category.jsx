@@ -26,7 +26,7 @@ const productsCategory = [
 
 const Category = () => {
   return (
-    <div className="categoryContainer bg-[#EEEEEE] py-8  ">
+    <div className="categoryContainer bg-[#EEEEEE] py-8 dark:bg-[#461959]  ">
       <div className="categoryWrapper relative  w-[99%] xsm:w-[96%] lg:w-[90%] m-auto ">
         {/* left line  */}
         <div className="leftLine h-[.1rem] sm:w-[26%] md:w-[29%] xmd:w-[32%] lg:w-[35%] absolute transform -translate-x-1/2 -translate-y-1/2 top-5 left-[20%] bg-red-600 "></div>
@@ -36,7 +36,7 @@ const Category = () => {
         <div className="rightLine h-[.1rem]  sm:w-[26%] md:w-[29%] xmd:w-[32%] lg:w-[35%] absolute transform -translate-x-1/2 -translate-y-1/2 top-5 left-[80%] bg-blue-600 "></div>
         {/* right line  */}
 
-        <h1 className=" pocificoFont text-gray-700 text-2xl xsm:text-3xl smd:text-4xl mb-7 xsm:mb-8 md:mb-12 pb-1 xsm:pb-2 text-center  ">
+        <h1 className=" pocificoFont text-gray-700 text-2xl xsm:text-3xl smd:text-4xl mb-7 xsm:mb-8 md:mb-12 pb-1 xsm:pb-2 text-center dark:text-gray-50 ">
           Shop by category
         </h1>
 
