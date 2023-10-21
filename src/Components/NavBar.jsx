@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-
+import { BsFillSunFill, BsFillMoonFill } from "react-icons/bs";
 import { RiMenu3Fill, RiCloseFill, RiXingLine } from "react-icons/ri";
 import { AppContext } from "../Context/AuthContext";
 
@@ -24,9 +24,21 @@ const navLink = [
 ];
 
 const NavBar = () => {
-  const { user, logOut } = useContext(AppContext);
+  const { user, logOut, darkMode, toggleTheme } = useContext(AppContext);
   const [toggle, setToggle] = useState(false);
 
+  // toggle dark theme
+
+  const handleTheme = () => {
+    console.log("click");
+    toggleTheme();
+
+    document.documentElement.classList.toggle("dark");
+  };
+
+  // console.log(darkMode);
+
+  // menu toggle
   const handleToggle = () => {
     setToggle(!toggle);
   };
@@ -40,7 +52,7 @@ const NavBar = () => {
 
   return (
     <div className="navContainer  z-50 py-2 bg-[#5C8374]  fixed w-full drop-shadow-lg ">
-      <div className="navWrapper flex justify-between w-[97%] xsm:w-[96%] lg:w-[94%] m-auto items-center ">
+      <div className="navWrapper flex justify-between w-[98%] xsm:w-[97%] lg:w-[96%] m-auto items-center ">
         {/* nav left  */}
         <div className="navLeft  ">
           <div className="navLeftImg  ">
@@ -82,7 +94,7 @@ const NavBar = () => {
         {/* nav Middle   */}
 
         {/* nav right  */}
-        <div className="navRight   ">
+        <div className="navRight  flex justify-between items-center  ">
           {/* !mobile view  */}
           <div className="notMobile hidden md:flex justify-center items-center ">
             {/* avatar image  */}
@@ -121,6 +133,16 @@ const NavBar = () => {
           </div>
 
           {/* !mobile view  */}
+
+          {/* toggle button  */}
+          <div
+            className="toggleMode  pl-0 md:pl-2 mr-3 md:pr-0 text-2xl "
+            onClick={handleTheme}
+          >
+            {darkMode ? <BsFillMoonFill /> : <BsFillSunFill />}
+          </div>
+          {/* toggle button  */}
+
           {/*  */}
           {/* mobile view  */}
 

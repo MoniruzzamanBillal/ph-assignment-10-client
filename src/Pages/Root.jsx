@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Outlet } from "react-router-dom";
 import NavBar from "../Components/NavBar";
 import Footer from "../Components/Footer";
-import AppProvider from "../Context/AuthContext";
+import AppProvider, { AppContext } from "../Context/AuthContext";
 
 const Root = () => {
   return (

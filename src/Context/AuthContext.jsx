@@ -13,6 +13,12 @@ export const AppContext = createContext();
 const AppProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState([]);
+  const [darkMode, setDarMode] = useState(false);
+
+  // function for toggle dark mode
+  const toggleTheme = () => {
+    setDarMode(!darkMode);
+  };
 
   // function for register a user
   const registerEmail = (email, password) => {
@@ -49,6 +55,8 @@ const AppProvider = ({ children }) => {
     registerEmail,
     emailLogin,
     setUser,
+    darkMode,
+    toggleTheme,
   };
 
   return <AppContext.Provider value={appValue}>{children}</AppContext.Provider>;
