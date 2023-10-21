@@ -27,7 +27,7 @@ const BrandDetail = () => {
     }
   }, []);
 
-  console.log(phoneData);
+  // console.log(phoneData);
 
   const CoomingSoon = () => {
     return (

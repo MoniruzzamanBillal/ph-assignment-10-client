@@ -24,10 +24,3 @@ const Brand = () => {
 };
 
 export default Brand;
-
-// https://i.ibb.co/n6b2Fnz/amazfit-logot-1.png
-// https://i.ibb.co/XFsyRkx/jbl.png
-// https://i.ibb.co/09HXwYK/oneplus-new8781.jpg
-// https://i.ibb.co/R9sHpjR/samsung.png
-// https://i.ibb.co/k3C2Zj5/walton.jpg
-// https://i.ibb.co/9NNPq9d/xiaomi.jpg
