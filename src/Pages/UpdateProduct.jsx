@@ -1,11 +1,25 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { FcGoogle } from "react-icons/fc";
 
 const UpdateProduct = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
 
-  //   console.log(id);
-
+  //   console.log(id);  //   toast for success
+  const addedSuccessFully = () =>
+    toast.success("Product updated successfully!", {
+      position: "top-center",
+      autoClose: 1200,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+    });
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("submit click");
@@ -20,6 +34,29 @@ const UpdateProduct = () => {
     const rating = form.rating.value;
     const productDescription = form.description.value;
 
+    // check for empty input field
+    if (
+      !brandName ||
+      !productName ||
+      !productImg ||
+      !category ||
+      !price ||
+      !rating ||
+      !productDescription
+    ) {
+      toast.error("All fields are required.", {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
+      return;
+    }
+
     const newItemObj = {
       brandName,
       productName,
@@ -32,17 +69,38 @@ const UpdateProduct = () => {
 
     console.log(newItemObj);
 
-    fetch(`http://localhost:5000/update/${id}`, {
-      method: "PUT",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(newItemObj),
-    })
+    // fetch(`http://localhost:5000/update/${id}`, {
+    fetch(
+      `https://brand-shop-gg5mqakxp-md-moniruzzamans-projects.vercel.app/update/${id}`,
+      {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(newItemObj),
+      }
+    )
       .then((response) => response.json())
-      .then((data) => console.log(data))
+      .then((data) => {
+        console.log(data);
+        if (data.acknowledged) {
+          addedSuccessFully();
+
+          setInterval(() => {
+            navigate("/");
+          }, 1000);
+        }
+      })
       .catch((error) => console.log(error));
     //
+
+    form.brand.value = "";
+    form.productName.value = "";
+    form.image.value = "";
+    form.category.value = "";
+    form.price.value = "";
+    form.rating.value = "";
+    form.description.value = "";
   };
 
   return (
@@ -188,14 +246,14 @@ const UpdateProduct = () => {
               <div className="sm:col-span-2">
                 <label
                   htmlFor="description"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-sm font-medium text-gray-900 "
                 >
                   Description
                 </label>
                 <textarea
                   id="description"
                   rows="4"
-                  className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 "
                   placeholder="Give short description about product"
                 ></textarea>
               </div>
@@ -211,6 +269,7 @@ const UpdateProduct = () => {
           </form>
         </div>
         {/* form  */}
+        <ToastContainer />
       </div>
       {/*  */}
     </div>

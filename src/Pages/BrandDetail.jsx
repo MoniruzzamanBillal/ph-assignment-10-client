@@ -27,7 +27,18 @@ const BrandDetail = () => {
     }
   }, []);
 
-  // console.log(filterData);
+  console.log(phoneData);
+
+  const CoomingSoon = () => {
+    return (
+      <div className="flex w-full robotoFont mt-6 flex-col items-center justify-center   px-4">
+        <h1 className="text-4xl font-bold text-gray-800 mb-4">Coming Soon</h1>
+        <p className="text-gray-600 text-lg mb-8">
+          We run out of product.We will notify you when we get stock.
+        </p>
+      </div>
+    );
+  };
 
   return (
     <div className="brandDetailContainer bg-[#CFF5E7] pt-[4rem] ">
@@ -65,10 +76,22 @@ const BrandDetail = () => {
           {/*  */}
 
           {/* all products card  */}
-          <div className="products  grid grid-cols-1 xsm:grid-cols-2 xmd:grid-cols-3 lg:grid-cols-4 gap-x-3 gap-y-6 ">
-            {phoneData.map((product, ind) => (
-              <ProductCard key={ind} product={product} />
-            ))}
+          <div
+            className={` products ${
+              phoneData.length > 0
+                ? "grid grid-cols-1 xsm:grid-cols-2 xmd:grid-cols-3 lg:grid-cols-4 gap-x-3 gap-y-6"
+                : "flex justify-center items-center"
+            }   `}
+          >
+            {phoneData && phoneData.length > 0 ? (
+              phoneData.map((product, ind) => (
+                <ProductCard key={ind} product={product} />
+              ))
+            ) : (
+              <div className="comingsoon flex justify-center items-center  ">
+                <CoomingSoon />
+              </div>
+            )}
 
             {/* <ProductCard /> */}
           </div>

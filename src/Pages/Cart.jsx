@@ -21,18 +21,22 @@ const Cart = () => {
 
   // delete function
   const handleDelete = (id) => {
-    console.log("click");
+    // console.log("click");
     // console.log(id);
 
-    fetch(`http://localhost:5000/addcart/${id}`, {
-      method: "DELETE",
-    })
+    // fetch(`http://localhost:5000/addcart/${id}`, {
+    fetch(
+      `https://brand-shop-gg5mqakxp-md-moniruzzamans-projects.vercel.app/addcart/${id}`,
+      {
+        method: "DELETE",
+      }
+    )
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
 
         const remaining = filterData.filter((data) => data._id !== id);
-        console.log(remaining);
+        // console.log(remaining);
         // setRecipes(remaining);
         setFilterData(remaining);
       })

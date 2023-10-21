@@ -1,6 +1,19 @@
-import React from "react";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const AddProduct = () => {
+  // toast for successfull insert
+  const addedSuccessFully = () =>
+    toast.success("New item added successfully!", {
+      position: "top-center",
+      autoClose: 1200,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+    });
+
   const handleSubmit = (e) => {
     e.preventDefault();
     // console.log("submit click");
@@ -13,6 +26,29 @@ const AddProduct = () => {
     const price = form.price.value;
     const rating = form.rating.value;
     const productDescription = form.description.value;
+
+    // check for empty input field
+    if (
+      !brandName ||
+      !productName ||
+      !productImg ||
+      !category ||
+      !price ||
+      !rating ||
+      !productDescription
+    ) {
+      toast.error("All fields are required.", {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
+      return;
+    }
 
     const newItemObj = {
       brandName,
@@ -34,12 +70,16 @@ const AddProduct = () => {
       body: JSON.stringify(newItemObj),
     };
 
-    fetch(`http://localhost:5000/product`, fetchMethod)
+    // fetch(`http://localhost:5000/product`, fetchMethod)
+    fetch(
+      `https://brand-shop-gg5mqakxp-md-moniruzzamans-projects.vercel.app/product`,
+      fetchMethod
+    )
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
         if (data.insertedId) {
-          alert("item added successfully");
+          addedSuccessFully();
         }
       })
       .catch((error) => console.log(error));
@@ -217,6 +257,7 @@ const AddProduct = () => {
           </form>
         </div>
         {/* form  */}
+        <ToastContainer />
       </div>
       {/*  */}
     </div>

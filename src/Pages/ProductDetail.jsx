@@ -1,6 +1,8 @@
 import React, { useContext, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import { AppContext } from "../Context/AuthContext";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ProductDetail = () => {
   const { user } = useContext(AppContext);
@@ -24,6 +26,32 @@ const ProductDetail = () => {
     _id,
   } = productDetail;
 
+  //   toast for successfully added product
+  const addedSuccessFully = () =>
+    toast.success("product added successfully!", {
+      position: "top-center",
+      autoClose: 1200,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+    });
+
+  // toast for duplicate add
+  const errorAdd = () =>
+    toast.warn("Product already added", {
+      position: "top-center",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+    });
+
   const handleCart = (id) => {
     // console.log("click");
     // console.log(id);
@@ -43,12 +71,16 @@ const ProductDetail = () => {
       body: JSON.stringify(newItemObj),
     };
 
-    fetch(`http://localhost:5000/addcart`, fetchMethod)
+    // fetch(`http://localhost:5000/addcart`, fetchMethod)
+    fetch(
+      `https://brand-shop-gg5mqakxp-md-moniruzzamans-projects.vercel.app/addcart`,
+      fetchMethod
+    )
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         if (data.acknowledged) {
-          alert("item added successfully");
+          addedSuccessFully();
         }
       })
       .catch((error) => console.log(error));
@@ -116,7 +148,7 @@ const ProductDetail = () => {
           </div>
           {/* product card right  */}
         </div>
-
+        <ToastContainer />
         {/*  */}
 
         {/* product card  */}

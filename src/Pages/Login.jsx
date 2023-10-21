@@ -49,9 +49,9 @@ const Login = () => {
 
   // email login
   const handleSubmit = () => {
-    console.log("submit click");
-    console.log(emailInput.value);
-    console.log(passwordInput.value);
+    // console.log("submit click");
+    // console.log(emailInput.value);
+    // console.log(passwordInput.value);
 
     emailLogin(emailInput.value, passwordInput.value)
       .then((user) => {

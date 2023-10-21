@@ -1,6 +1,6 @@
 export const BrandsItem = [
   {
-    brandName: "xiaomi",
+    brandName: "Xiaomi",
     imgLink: "https://i.ibb.co/9NNPq9d/xiaomi.jpg",
     advertiseImg: [
       {
@@ -66,7 +66,7 @@ export const BrandsItem = [
     ],
   },
   {
-    brandName: "JBL",
+    brandName: "Jbl",
     imgLink: "https://i.ibb.co/XFsyRkx/jbl.png",
     advertiseImg: [
       {
